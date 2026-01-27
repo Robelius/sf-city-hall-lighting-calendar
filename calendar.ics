@@ -4,4 +4,26 @@ PRODID:-//SF City Hall Lighting Calendar//github.com//
 X-WR-CALDESC:San Francisco City Hall nightly lighting schedule
 X-WR-CALNAME:SF City Hall Lighting
 X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+SUMMARY:CHC: blue/red
+DTSTART;VALUE=DATE:20260102
+DTSTAMP:20260127T192941Z
+UID:2026-01-02-cityhall@sf.gov
+DESCRIPTION:National Day of HaitiSaturday\, January 3\, 2026 – 49ers red
+ /gold – in recognition of SF 49ers vs Seattle Seahawks for NFC’s No. 1
+  playoff seedSaturday\, January 10\, 2026 – 49ers red/gold – in recogn
+ ition of SF 49ers vs Philadelphia Eagles for NFC’s Wild Card gameFriday\
+ , January 16\, 2026 – “tie-dye” – in recognition of Celebrating th
+ e cultural significance and enduring influence of the Grateful Dead on San
+  Francisco’s identitySaturday\, January 17\, 2026 – 49ers red/gold –
+  in recognition of SF 49ers vs Seattle Seahawks for NFC’s Divisional Rou
+ nd gameMonday\, January 19\, 2026 – red/green/black – in recognition o
+ f MLK\, Jr HolidayMonday\, January 26\, 2026 – blue/white/red – in rec
+ ognition of National Day of AustraliaTuesday\, January 27\, 2026 – saffr
+ on/white/green – in recognition of National Day of IndiaRequest City Hal
+ l lighting in specific colors to honor a cause
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
 END:VCALENDAR
