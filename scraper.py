@@ -36,7 +36,14 @@ def fetch_page():
     
     response = requests.get(CITY_HALL_URL, headers=headers, timeout=30)
     response.raise_for_status()
-    return response.text
+    
+    # DEBUG: Save the HTML to see what we're actually getting
+    html_content = response.text
+    with open('debug_response.html', 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    print(f"DEBUG: Saved response HTML ({len(html_content)} chars)")
+    
+    return html_content
 
 
 def parse_lighting_schedule(html_content):
