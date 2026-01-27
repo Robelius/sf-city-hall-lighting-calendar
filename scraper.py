@@ -88,63 +88,58 @@ def parse_lighting_schedule(html_content):
     
     print(f"Schedule content tag: {schedule_content.name}")
     
-    # Extract all text from the schedule section
-    schedule_text = schedule_content.get_text()
-    
-    print(f"Schedule text length: {len(schedule_text)} characters")
-    print(f"First 500 characters: {schedule_text[:500]}")
-    
     # Parse the schedule entries
     events = []
     
-    # Try multiple patterns to be more flexible
-    # Pattern 1: Full format with "in recognition of"
+    # Find all <b> tags within the schedule content (each event is in a <b> tag)
+    event_tags = schedule_content.find_all('b')
+    print(f"Found {len(event_tags)} event tags")
+    
+    # Pattern to match date lines: "Day, Month Date, Year – colors – in recognition of description"
     # Example: "Friday, January 2, 2026 – blue/red – in recognition of National Day of Haiti"
-    pattern1 = r'([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.*?)(?=\n[A-Z]|\n\n|$)'
+    pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.+)$'
     
-    # Pattern 2: Simpler format without "in recognition of"
-    # Example: "Friday, January 2, 2026 – blue/red – National Day of Haiti"
-    pattern2 = r'([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+(.*?)(?=\n[A-Z]|\n\n|$)'
-    
-    # Try pattern 1 first
-    matches = list(re.finditer(pattern1, schedule_text, re.MULTILINE | re.DOTALL))
-    print(f"Pattern 1 matches: {len(matches)}")
-    
-    if not matches:
-        # Try pattern 2
-        matches = list(re.finditer(pattern2, schedule_text, re.MULTILINE | re.DOTALL))
-        print(f"Pattern 2 matches: {len(matches)}")
-    
-    for match in matches:
-        day_name = match.group(1)
-        month_name = match.group(2)
-        day = match.group(3)
-        year = match.group(4)
-        colors = match.group(5).strip()
-        details = match.group(6).strip()
+    for tag in event_tags:
+        event_text = tag.get_text().strip()
         
-        # Parse the date
-        date_str = f"{month_name} {day}, {year}"
-        try:
-            event_date = datetime.strptime(date_str, "%B %d, %Y").date()
-            
-            events.append({
-                'date': event_date,
-                'colors': colors,
-                'details': details
-            })
-            
-            print(f"Found event: {event_date} - {colors} - {details}")
-            
-        except ValueError as e:
-            print(f"Warning: Could not parse date '{date_str}': {e}")
+        # Skip empty or non-event text
+        if not event_text or 'City Hall' in event_text:
             continue
+        
+        # Try to match the pattern
+        match = re.match(pattern, event_text, re.DOTALL)
+        
+        if match:
+            day_name = match.group(1)
+            month_name = match.group(2)
+            day = match.group(3)
+            year = match.group(4)
+            colors = match.group(5).strip()
+            details = match.group(6).strip()
+            
+            # Parse the date
+            date_str = f"{month_name} {day}, {year}"
+            try:
+                event_date = datetime.strptime(date_str, "%B %d, %Y").date()
+                
+                events.append({
+                    'date': event_date,
+                    'colors': colors,
+                    'details': details
+                })
+                
+                print(f"Found event: {event_date} - {colors} - {details}")
+                
+            except ValueError as e:
+                print(f"Warning: Could not parse date '{date_str}': {e}")
+                continue
+        else:
+            print(f"Warning: Could not parse event text: {event_text[:100]}")
     
     if not events:
-        print("\nDEBUG: No events found. Printing raw schedule text:")
-        print("=" * 80)
-        print(schedule_text[:2000])
-        print("=" * 80)
+        print("\nDEBUG: No events found. Showing first few tags:")
+        for i, tag in enumerate(event_tags[:3]):
+            print(f"Tag {i}: {tag.get_text()[:200]}")
     
     return events
 
@@ -207,7 +202,11 @@ def load_existing_csv(filename):
         reader = csv.DictReader(f)
         for row in reader:
             # Create a tuple of (date, colors, details) for easy duplicate checking
-            existing_events.add((row['date'], row['colors'], row['details']))
+            # Handle both uppercase and lowercase headers for backward compatibility
+            date = row.get('DATE', row.get('date', ''))
+            colors = row.get('COLORS', row.get('colors', ''))
+            details = row.get('DETAILS', row.get('details', ''))
+            existing_events.add((date, colors, details))
     
     return existing_events
 
@@ -239,7 +238,7 @@ def save_to_csv(events, filename):
     if new_events:
         # Append new events to CSV
         with open(filename, 'a', newline='', encoding='utf-8') as f:
-            fieldnames = ['date', 'colors', 'details']
+            fieldnames = ['DATE', 'COLORS', 'DETAILS']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             
             # Write header if new file
@@ -249,9 +248,9 @@ def save_to_csv(events, filename):
             # Write new events
             for event in new_events:
                 writer.writerow({
-                    'date': event['date'].isoformat(),
-                    'colors': event['colors'],
-                    'details': event['details']
+                    'DATE': event['date'].isoformat(),
+                    'COLORS': event['colors'],
+                    'DETAILS': event['details']
                 })
         
         print(f"\nCSV updated: {len(new_events)} new event(s) added to {filename}")
