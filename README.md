@@ -66,37 +66,6 @@ The CSV file accumulates all events over time without duplicates, providing a co
 6. Commits the updated files to the repository
 7. Your subscribed calendar automatically syncs the changes
 
-## Manual Update
-
-You can manually trigger the calendar update:
-
-1. Go to the **Actions** tab in this repository
-2. Click on "Update SF City Hall Lighting Calendar"
-3. Click "Run workflow"
-
-### Prerequisites
-
-- Python 3.11 or higher
-- pip
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/sf-city-hall-lighting-calendar.git
-cd sf-city-hall-lighting-calendar
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the scraper
-python scraper.py
-```
-
-This will generate:
-- `calendar.ics` - iCalendar subscription file
-- `lighting_schedule.csv` - Historical data in CSV format
-
 ## Technical Details
 
 - **Scraper**: Python with Playwright (headless browser) and BeautifulSoup for HTML parsing
