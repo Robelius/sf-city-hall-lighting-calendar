@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//SF City Hall Lighting Calendar//github.com//
-X-WR-CALNAME:SF City Hall Lighting
 X-WR-CALDESC:San Francisco City Hall nightly lighting schedule
+X-WR-CALNAME:SF City Hall Lighting
 X-WR-TIMEZONE:America/Los_Angeles
 END:VCALENDAR
