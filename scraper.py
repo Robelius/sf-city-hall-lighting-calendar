@@ -32,34 +32,37 @@ def parse_lighting_schedule(html_content):
     """Parse the lighting schedule section from the HTML"""
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # Find the lighting schedule section - try multiple approaches
-    # First, try to find any text containing "Lighting schedule"
+    # Find the lighting schedule section
+    # The HTML structure is: <details><summary><h3>Lighting schedule</h3></summary><div>content</div></details>
     schedule_text_element = soup.find(string=re.compile(r'Lighting schedule', re.IGNORECASE))
     
     if not schedule_text_element:
         print("Warning: Could not find 'Lighting schedule' text anywhere")
         return []
     
-    # Get the parent element (the tag containing this text)
-    schedule_heading = schedule_text_element.find_parent()
+    print(f"Found 'Lighting schedule' text")
     
-    if not schedule_heading:
-        print("Warning: Could not find parent element for lighting schedule")
-        return []
+    # Navigate up to find the <summary> element
+    summary_element = schedule_text_element.find_parent('summary')
     
-    print(f"Found heading: '{schedule_heading.get_text().strip()}' (tag: {schedule_heading.name})")
-    
-    # Get the content after the heading
-    schedule_content = schedule_heading.find_next_sibling()
-    
-    if not schedule_content:
-        print("Warning: Could not find schedule content after heading")
-        # Try getting the parent's next sibling instead
-        schedule_content = schedule_heading.parent.find_next_sibling()
-        if schedule_content:
-            print(f"Found content at parent level (tag: {schedule_content.name})")
+    if not summary_element:
+        print("Warning: Could not find <summary> parent element")
+        # Fallback: try any parent and get its next sibling
+        schedule_heading = schedule_text_element.find_parent()
+        if schedule_heading:
+            schedule_content = schedule_heading.find_next_sibling()
+            if not schedule_content:
+                schedule_content = schedule_heading.parent.find_next_sibling()
         else:
             return []
+    else:
+        print(f"Found <summary> element")
+        # Get the next sibling of the summary (should be the content div)
+        schedule_content = summary_element.find_next_sibling()
+    
+    if not schedule_content:
+        print("Warning: Could not find schedule content")
+        return []
     
     print(f"Schedule content tag: {schedule_content.name}")
     
