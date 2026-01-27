@@ -120,4 +120,4 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Note**: The lighting schedule is updated monthly by the City of San Francisco. This calendar automatically syncs those updates daily.
+**Note**: The lighting schedule is updated on the first of each month by the City of San Francisco. This calendar automatically syncs those updates daily.
