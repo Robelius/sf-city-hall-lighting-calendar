@@ -101,10 +101,11 @@ This will generate:
 
 ## Technical Details
 
-- **Scraper**: Python with BeautifulSoup for HTML parsing
+- **Scraper**: Python with Playwright (headless browser) and BeautifulSoup for HTML parsing
 - **Calendar Format**: iCalendar (.ics) standard
 - **Automation**: GitHub Actions (daily cron job)
 - **Timezone**: America/Los_Angeles (Pacific Time)
+- **Note**: Uses Playwright because SF.gov requires JavaScript execution to bypass AWS WAF protection
 
 ## Data Source
 

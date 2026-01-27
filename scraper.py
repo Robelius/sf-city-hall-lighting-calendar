@@ -7,11 +7,11 @@ Scrapes the lighting schedule from SF.gov and generates an iCalendar file
 import csv
 import os
 import re
-import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from icalendar import Calendar, Event
 from zoneinfo import ZoneInfo
+from playwright.sync_api import sync_playwright
 
 # Constants
 CITY_HALL_URL = "https://www.sf.gov/location--san-francisco-city-hall"
@@ -21,29 +21,33 @@ PACIFIC_TZ = ZoneInfo("America/Los_Angeles")
 
 
 def fetch_page():
-    """Fetch the SF City Hall webpage"""
+    """Fetch the SF City Hall webpage using Playwright (handles JavaScript)"""
     print(f"Fetching page from {CITY_HALL_URL}...")
     
-    # Add headers to mimic a real browser (some sites block requests without proper headers)
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
-    }
-    
-    response = requests.get(CITY_HALL_URL, headers=headers, timeout=30)
-    response.raise_for_status()
-    
-    # DEBUG: Save the HTML to see what we're actually getting
-    html_content = response.text
-    with open('debug_response.html', 'w', encoding='utf-8') as f:
-        f.write(html_content)
-    print(f"DEBUG: Saved response HTML ({len(html_content)} chars)")
-    
-    return html_content
+    with sync_playwright() as p:
+        # Launch headless browser
+        print("Launching browser...")
+        browser = p.chromium.launch(headless=True)
+        
+        # Create a new page
+        page = browser.new_page()
+        
+        # Navigate to the URL
+        print("Navigating to page...")
+        page.goto(CITY_HALL_URL, wait_until='networkidle', timeout=60000)
+        
+        # Wait a bit more for any dynamic content to load
+        print("Waiting for content to load...")
+        page.wait_for_timeout(3000)
+        
+        # Get the HTML content
+        html_content = page.content()
+        
+        # Close the browser
+        browser.close()
+        
+        print(f"Successfully fetched {len(html_content)} characters")
+        return html_content
 
 
 def parse_lighting_schedule(html_content):
