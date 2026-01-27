@@ -23,7 +23,18 @@ PACIFIC_TZ = ZoneInfo("America/Los_Angeles")
 def fetch_page():
     """Fetch the SF City Hall webpage"""
     print(f"Fetching page from {CITY_HALL_URL}...")
-    response = requests.get(CITY_HALL_URL, timeout=30)
+    
+    # Add headers to mimic a real browser (some sites block requests without proper headers)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
+    }
+    
+    response = requests.get(CITY_HALL_URL, headers=headers, timeout=30)
     response.raise_for_status()
     return response.text
 
