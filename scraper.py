@@ -40,6 +40,8 @@ def parse_lighting_schedule(html_content):
         print("Warning: Could not find 'Lighting schedule' heading")
         return []
     
+    print(f"Found heading: '{schedule_heading.get_text().strip()}'")
+    
     # Get the content after the heading
     schedule_content = schedule_heading.find_next_sibling()
     
@@ -47,17 +49,34 @@ def parse_lighting_schedule(html_content):
         print("Warning: Could not find schedule content")
         return []
     
+    print(f"Schedule content tag: {schedule_content.name}")
+    
     # Extract all text from the schedule section
     schedule_text = schedule_content.get_text()
+    
+    print(f"Schedule text length: {len(schedule_text)} characters")
+    print(f"First 500 characters: {schedule_text[:500]}")
     
     # Parse the schedule entries
     events = []
     
-    # Pattern to match date lines: "Day, Month Date, Year – colors – description"
+    # Try multiple patterns to be more flexible
+    # Pattern 1: Full format with "in recognition of"
     # Example: "Friday, January 2, 2026 – blue/red – in recognition of National Day of Haiti"
-    pattern = r'([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+–\s+(.*?)\s+–\s+in recognition of\s+(.*?)(?=\n|$)'
+    pattern1 = r'([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.*?)(?=\n[A-Z]|\n\n|$)'
     
-    matches = re.finditer(pattern, schedule_text, re.MULTILINE)
+    # Pattern 2: Simpler format without "in recognition of"
+    # Example: "Friday, January 2, 2026 – blue/red – National Day of Haiti"
+    pattern2 = r'([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+(.*?)(?=\n[A-Z]|\n\n|$)'
+    
+    # Try pattern 1 first
+    matches = list(re.finditer(pattern1, schedule_text, re.MULTILINE | re.DOTALL))
+    print(f"Pattern 1 matches: {len(matches)}")
+    
+    if not matches:
+        # Try pattern 2
+        matches = list(re.finditer(pattern2, schedule_text, re.MULTILINE | re.DOTALL))
+        print(f"Pattern 2 matches: {len(matches)}")
     
     for match in matches:
         day_name = match.group(1)
@@ -83,6 +102,12 @@ def parse_lighting_schedule(html_content):
         except ValueError as e:
             print(f"Warning: Could not parse date '{date_str}': {e}")
             continue
+    
+    if not events:
+        print("\nDEBUG: No events found. Printing raw schedule text:")
+        print("=" * 80)
+        print(schedule_text[:2000])
+        print("=" * 80)
     
     return events
 
