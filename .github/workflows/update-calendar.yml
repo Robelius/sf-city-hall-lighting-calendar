@@ -2,9 +2,8 @@ name: Update SF City Hall Lighting Calendar
 
 on:
   schedule:
-    # Runs daily at 1pm PST (9pm UTC in winter, 8pm UTC in summer)
-    # Using 9pm UTC for standard time
-    - cron: '0 21 * * *'
+    # Runs on the 1st and 2nd of each month at 12pm PST (8pm UTC)
+    - cron: '0 20 1,2 * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:

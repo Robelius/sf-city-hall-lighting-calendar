@@ -4,9 +4,7 @@ A calendar subscription for San Francisco City Hall's nightly lighting schedule.
 
 ## About
 
-San Francisco City Hall is illuminated with different colored lights throughout the year to honor various causes, celebrations, and events. This project automatically scrapes the [official SF City Hall website](https://www.sf.gov/location--san-francisco-city-hall) daily and generates an up-to-date calendar subscription file. 
-
-*I plan to reduce the frequency once I know this actually works.*
+San Francisco City Hall is illuminated with different colored lights throughout the year to honor various causes, celebrations, and events. This project automatically scrapes the [official SF City Hall website](https://www.sf.gov/location--san-francisco-city-hall) twice monthly (on the 1st and 2nd of each month) and generates an up-to-date calendar subscription file.
 
 ## Subscribe to the Calendar
 
@@ -60,7 +58,7 @@ The CSV file accumulates all events over time without duplicates, providing a co
 
 ## How It Works
 
-1. A GitHub Action runs daily at 1pm PST
+1. A GitHub Action runs on the 1st and 2nd of each month at 12pm PST
 2. The Python scraper fetches the SF City Hall website
 3. It extracts the lighting schedule for the current month
 4. Appends new events to the CSV file (without duplicates)
@@ -121,4 +119,4 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Note**: The lighting schedule is updated on the first of each month by the City of San Francisco. This calendar automatically syncs those updates daily.
+**Note**: The lighting schedule is updated on the first of each month by the City of San Francisco. This calendar automatically syncs those updates on the 1st and 2nd of each month.
