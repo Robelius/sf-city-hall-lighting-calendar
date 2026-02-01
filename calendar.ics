@@ -7,7 +7,7 @@ X-WR-TIMEZONE:America/Los_Angeles
 BEGIN:VEVENT
 SUMMARY:CHC: blue/red
 DTSTART;VALUE=DATE:20260102
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-02-cityhall@sf.gov
 DESCRIPTION:National Day of Haiti
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -17,7 +17,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: 49ers red/gold
 DTSTART;VALUE=DATE:20260103
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-03-cityhall@sf.gov
 DESCRIPTION:SF 49ers vs Seattle Seahawks for NFC’s No. 1 playoff seed
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -27,7 +27,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: 49ers red/gold
 DTSTART;VALUE=DATE:20260110
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-10-cityhall@sf.gov
 DESCRIPTION:SF 49ers vs Philadelphia Eagles for NFC’s Wild Card game
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -37,7 +37,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: “tie-dye”
 DTSTART;VALUE=DATE:20260116
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-16-cityhall@sf.gov
 DESCRIPTION:Celebrating the cultural significance and enduring influence o
  f the Grateful Dead on San Francisco’s identity
@@ -48,7 +48,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: 49ers red/gold
 DTSTART;VALUE=DATE:20260117
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-17-cityhall@sf.gov
 DESCRIPTION:SF 49ers vs Seattle Seahawks for NFC’s Divisional Round game
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -58,7 +58,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: red/green/black
 DTSTART;VALUE=DATE:20260119
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-19-cityhall@sf.gov
 DESCRIPTION:MLK\, Jr Holiday
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -68,7 +68,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/white/red
 DTSTART;VALUE=DATE:20260126
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-26-cityhall@sf.gov
 DESCRIPTION:National Day of Australia
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
@@ -78,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: saffron/white/green
 DTSTART;VALUE=DATE:20260127
-DTSTAMP:20260127T193937Z
+DTSTAMP:20260201T203626Z
 UID:2026-01-27-cityhall@sf.gov
 DESCRIPTION:National Day of India
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
