@@ -8,7 +8,7 @@ import csv
 import os
 import re
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 from zoneinfo import ZoneInfo
 from playwright.sync_api import sync_playwright
@@ -88,118 +88,147 @@ def parse_lighting_schedule(html_content):
     
     print(f"Schedule content tag: {schedule_content.name}")
     
-    # Parse the schedule entries
-    events = []
-    
     # Find all <b> tags within the schedule content (each event is in a <b> tag)
     event_tags = schedule_content.find_all('b')
     print(f"Found {len(event_tags)} event tags")
     
-    # January format pattern: "Day, Month Date, Year – colors – in recognition of description"
-    january_pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.+)$'
+    # Parse each tag using the generic split-and-parse approach
+    events = []
     
-    # February format: Date pattern for single date or range
-    feb_date_pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+)(?:\s*-\s*[A-Z][a-z]+day,\s+[A-Z][a-z]+\s+(\d+))?,\s+(\d{4})$'
-    
-    unmatched_tags = []
-    
-    # First pass: Try January format (everything in one tag)
     for tag in event_tags:
         event_text = tag.get_text().strip()
         
         # Skip empty or non-event text
-        if not event_text or 'City Hall' in event_text:
+        if not event_text or 'City Hall' in event_text or 'Request' in event_text:
             continue
         
-        # Try January format
-        match = re.match(january_pattern, event_text, re.DOTALL)
+        # Split on em-dash (–), en-dash (—), or spaced hyphen ( - ) used as delimiter
+        # but NOT hyphens within date ranges like "February 1 - Sunday, February 8"
+        parts = re.split(r'\s*[–—]\s*', event_text)
         
-        if match:
-            day_name = match.group(1)
-            month_name = match.group(2)
-            day = match.group(3)
-            year = match.group(4)
-            colors = match.group(5).strip()
-            details = match.group(6).strip()
-            
-            # Parse the date
-            date_str = f"{month_name} {day}, {year}"
-            try:
-                event_date = datetime.strptime(date_str, "%B %d, %Y").date()
-                
-                events.append({
-                    'date': event_date,
-                    'colors': colors,
-                    'details': details
-                })
-                
-                print(f"Found event (January format): {event_date} - {colors} - {details}")
-                
-            except ValueError as e:
-                print(f"Warning: Could not parse date '{date_str}': {e}")
-        else:
-            # Doesn't match January format, collect for February format
-            unmatched_tags.append(event_text)
-    
-    # Second pass: Try February format (alternating date/color pairs)
-    if unmatched_tags:
-        print(f"Trying February format with {len(unmatched_tags)} unmatched tags...")
+        if len(parts) < 2:
+            print(f"Warning: Could not split event text into parts: {event_text[:100]}")
+            continue
         
-        i = 0
-        while i < len(unmatched_tags) - 1:
-            date_text = unmatched_tags[i]
-            color_text = unmatched_tags[i + 1]
-            
-            # Try to parse date (may be single date or range)
-            date_match = re.match(feb_date_pattern, date_text)
-            
-            if date_match:
-                month_name = date_match.group(2)
-                start_day = int(date_match.group(3))
-                end_day = date_match.group(4)  # May be None for single dates
-                year = date_match.group(5)
-                
-                # If end_day exists, it's a date range
-                if end_day:
-                    end_day = int(end_day)
-                    # Create an event for each day in the range
-                    for day in range(start_day, end_day + 1):
-                        date_str = f"{month_name} {day}, {year}"
-                        try:
-                            event_date = datetime.strptime(date_str, "%B %d, %Y").date()
-                            events.append({
-                                'date': event_date,
-                                'colors': color_text,
-                                'details': ''  # No details in February format
-                            })
-                            print(f"Found event (February format): {event_date} - {color_text}")
-                        except ValueError as e:
-                            print(f"Warning: Could not parse date '{date_str}': {e}")
-                else:
-                    # Single date
-                    date_str = f"{month_name} {start_day}, {year}"
-                    try:
-                        event_date = datetime.strptime(date_str, "%B %d, %Y").date()
-                        events.append({
-                            'date': event_date,
-                            'colors': color_text,
-                            'details': ''  # No details in February format
-                        })
-                        print(f"Found event (February format): {event_date} - {color_text}")
-                    except ValueError as e:
-                        print(f"Warning: Could not parse date '{date_str}': {e}")
-                
-                i += 2  # Skip the next tag (colors) as we already processed it
-            else:
-                print(f"Warning: Could not parse date text: {date_text[:100]}")
-                i += 1
+        # Part 0: Date(s) - always present
+        date_part = parts[0].strip()
+        
+        # Part 1: Colors - always present
+        colors = parts[1].strip()
+        
+        # Part 2+: Details - optional, may have "in recognition of" prefix
+        details = ''
+        if len(parts) > 2:
+            details = ' – '.join(parts[2:]).strip()
+            # Strip "in recognition of" prefix if present
+            details = re.sub(r'^in recognition of\s+', '', details, flags=re.IGNORECASE)
+        
+        # Parse dates (single date or date range)
+        parsed_dates = parse_dates(date_part)
+        
+        if not parsed_dates:
+            print(f"Warning: Could not parse date(s) from: {date_part}")
+            continue
+        
+        # Create an event for each date
+        for event_date in parsed_dates:
+            events.append({
+                'date': event_date,
+                'colors': colors,
+                'details': details
+            })
+            print(f"Found event: {event_date} - {colors}" + (f" - {details}" if details else ""))
     
     if not events:
-        print("\nDEBUG: No events found. Showing first few unmatched tags:")
-        for i, text in enumerate(unmatched_tags[:5]):
-            print(f"Tag {i}: {text[:200]}")
+        print("\nDEBUG: No events found. Showing first few tags:")
+        for i, tag in enumerate(event_tags[:5]):
+            print(f"Tag {i}: {tag.get_text()[:200]}")
     
     return events
+
+
+def parse_dates(date_text):
+    """Parse a date string that may be a single date or a date range.
+    
+    Supports formats like:
+    - "Friday, January 2, 2026"
+    - "Sunday, February 1 - Sunday, February 8, 2026"
+    - "Monday, March 15-17, 2026"
+    
+    Returns a list of date objects.
+    """
+    dates = []
+    
+    # Check for date range with full dates: "Day, Month Start - Day, Month End, Year"
+    range_match = re.match(
+        r'[A-Z][a-z]+day,\s+([A-Z][a-z]+)\s+(\d+)\s*-\s*[A-Z][a-z]+day,\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})',
+        date_text
+    )
+    
+    if range_match:
+        start_month = range_match.group(1)
+        start_day = int(range_match.group(2))
+        end_month = range_match.group(3)
+        end_day = int(range_match.group(4))
+        year = range_match.group(5)
+        
+        # Parse start and end dates
+        try:
+            start_date = datetime.strptime(f"{start_month} {start_day}, {year}", "%B %d, %Y").date()
+            end_date = datetime.strptime(f"{end_month} {end_day}, {year}", "%B %d, %Y").date()
+            
+            # Generate all dates in the range
+            current = start_date
+            while current <= end_date:
+                dates.append(current)
+                current += timedelta(days=1)
+            
+            return dates
+        except ValueError as e:
+            print(f"Warning: Could not parse date range '{date_text}': {e}")
+            return []
+    
+    # Check for short date range: "Day, Month Start-End, Year"
+    short_range_match = re.match(
+        r'[A-Z][a-z]+day,\s+([A-Z][a-z]+)\s+(\d+)\s*-\s*(\d+),\s+(\d{4})',
+        date_text
+    )
+    
+    if short_range_match:
+        month_name = short_range_match.group(1)
+        start_day = int(short_range_match.group(2))
+        end_day = int(short_range_match.group(3))
+        year = short_range_match.group(4)
+        
+        for day in range(start_day, end_day + 1):
+            try:
+                event_date = datetime.strptime(f"{month_name} {day}, {year}", "%B %d, %Y").date()
+                dates.append(event_date)
+            except ValueError as e:
+                print(f"Warning: Could not parse date '{month_name} {day}, {year}': {e}")
+        
+        return dates
+    
+    # Single date: "Day, Month Date, Year"
+    single_match = re.match(
+        r'[A-Z][a-z]+day,\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})',
+        date_text
+    )
+    
+    if single_match:
+        month_name = single_match.group(1)
+        day = single_match.group(2)
+        year = single_match.group(3)
+        
+        try:
+            event_date = datetime.strptime(f"{month_name} {day}, {year}", "%B %d, %Y").date()
+            dates.append(event_date)
+        except ValueError as e:
+            print(f"Warning: Could not parse date '{month_name} {day}, {year}': {e}")
+        
+        return dates
+    
+    return dates
 
 
 def generate_calendar(events):
