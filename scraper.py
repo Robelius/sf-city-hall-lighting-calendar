@@ -95,10 +95,15 @@ def parse_lighting_schedule(html_content):
     event_tags = schedule_content.find_all('b')
     print(f"Found {len(event_tags)} event tags")
     
-    # Pattern to match date lines: "Day, Month Date, Year – colors – in recognition of description"
-    # Example: "Friday, January 2, 2026 – blue/red – in recognition of National Day of Haiti"
-    pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.+)$'
+    # January format pattern: "Day, Month Date, Year – colors – in recognition of description"
+    january_pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+),\s+(\d{4})\s+[–—-]\s+(.*?)\s+[–—-]\s+in recognition of\s+(.+)$'
     
+    # February format: Date pattern for single date or range
+    feb_date_pattern = r'^([A-Z][a-z]+day),\s+([A-Z][a-z]+)\s+(\d+)(?:\s*-\s*[A-Z][a-z]+day,\s+[A-Z][a-z]+\s+(\d+))?,\s+(\d{4})$'
+    
+    unmatched_tags = []
+    
+    # First pass: Try January format (everything in one tag)
     for tag in event_tags:
         event_text = tag.get_text().strip()
         
@@ -106,8 +111,8 @@ def parse_lighting_schedule(html_content):
         if not event_text or 'City Hall' in event_text:
             continue
         
-        # Try to match the pattern
-        match = re.match(pattern, event_text, re.DOTALL)
+        # Try January format
+        match = re.match(january_pattern, event_text, re.DOTALL)
         
         if match:
             day_name = match.group(1)
@@ -128,18 +133,71 @@ def parse_lighting_schedule(html_content):
                     'details': details
                 })
                 
-                print(f"Found event: {event_date} - {colors} - {details}")
+                print(f"Found event (January format): {event_date} - {colors} - {details}")
                 
             except ValueError as e:
                 print(f"Warning: Could not parse date '{date_str}': {e}")
-                continue
         else:
-            print(f"Warning: Could not parse event text: {event_text[:100]}")
+            # Doesn't match January format, collect for February format
+            unmatched_tags.append(event_text)
+    
+    # Second pass: Try February format (alternating date/color pairs)
+    if unmatched_tags:
+        print(f"Trying February format with {len(unmatched_tags)} unmatched tags...")
+        
+        i = 0
+        while i < len(unmatched_tags) - 1:
+            date_text = unmatched_tags[i]
+            color_text = unmatched_tags[i + 1]
+            
+            # Try to parse date (may be single date or range)
+            date_match = re.match(feb_date_pattern, date_text)
+            
+            if date_match:
+                month_name = date_match.group(2)
+                start_day = int(date_match.group(3))
+                end_day = date_match.group(4)  # May be None for single dates
+                year = date_match.group(5)
+                
+                # If end_day exists, it's a date range
+                if end_day:
+                    end_day = int(end_day)
+                    # Create an event for each day in the range
+                    for day in range(start_day, end_day + 1):
+                        date_str = f"{month_name} {day}, {year}"
+                        try:
+                            event_date = datetime.strptime(date_str, "%B %d, %Y").date()
+                            events.append({
+                                'date': event_date,
+                                'colors': color_text,
+                                'details': ''  # No details in February format
+                            })
+                            print(f"Found event (February format): {event_date} - {color_text}")
+                        except ValueError as e:
+                            print(f"Warning: Could not parse date '{date_str}': {e}")
+                else:
+                    # Single date
+                    date_str = f"{month_name} {start_day}, {year}"
+                    try:
+                        event_date = datetime.strptime(date_str, "%B %d, %Y").date()
+                        events.append({
+                            'date': event_date,
+                            'colors': color_text,
+                            'details': ''  # No details in February format
+                        })
+                        print(f"Found event (February format): {event_date} - {color_text}")
+                    except ValueError as e:
+                        print(f"Warning: Could not parse date '{date_str}': {e}")
+                
+                i += 2  # Skip the next tag (colors) as we already processed it
+            else:
+                print(f"Warning: Could not parse date text: {date_text[:100]}")
+                i += 1
     
     if not events:
-        print("\nDEBUG: No events found. Showing first few tags:")
-        for i, tag in enumerate(event_tags[:3]):
-            print(f"Tag {i}: {tag.get_text()[:200]}")
+        print("\nDEBUG: No events found. Showing first few unmatched tags:")
+        for i, text in enumerate(unmatched_tags[:5]):
+            print(f"Tag {i}: {text[:200]}")
     
     return events
 
@@ -164,8 +222,9 @@ def generate_calendar(events):
         # All-day event
         event.add('dtstart', event_data['date'])
         
-        # Description with the details
-        event.add('description', event_data['details'])
+        # Description with the details (or default message if empty)
+        description = event_data['details'] if event_data['details'] else 'No details provided'
+        event.add('description', description)
         
         # Add location
         event.add('location', 'San Francisco City Hall, 1 Dr. Carlton B. Goodlett Place, San Francisco, CA 94102')
