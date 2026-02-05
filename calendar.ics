@@ -4,4 +4,184 @@ PRODID:-//SF City Hall Lighting Calendar//github.com//
 X-WR-CALDESC:San Francisco City Hall nightly lighting schedule
 X-WR-CALNAME:SF City Hall Lighting
 X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260201
+DTSTAMP:20260205T173119Z
+UID:2026-02-01-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260202
+DTSTAMP:20260205T173119Z
+UID:2026-02-02-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260203
+DTSTAMP:20260205T173119Z
+UID:2026-02-03-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260204
+DTSTAMP:20260205T173119Z
+UID:2026-02-04-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260205
+DTSTAMP:20260205T173119Z
+UID:2026-02-05-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260206
+DTSTAMP:20260205T173119Z
+UID:2026-02-06-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260207
+DTSTAMP:20260205T173119Z
+UID:2026-02-07-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/pink/yellow
+DTSTART;VALUE=DATE:20260208
+DTSTAMP:20260205T173119Z
+UID:2026-02-08-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: Red
+DTSTART;VALUE=DATE:20260210
+DTSTAMP:20260205T173119Z
+UID:2026-02-10-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/pink
+DTSTART;VALUE=DATE:20260214
+DTSTAMP:20260205T173119Z
+UID:2026-02-14-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white/blue
+DTSTART;VALUE=DATE:20260216
+DTSTAMP:20260205T173119Z
+UID:2026-02-16-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: yellow/green/red
+DTSTART;VALUE=DATE:20260217
+DTSTAMP:20260205T173119Z
+UID:2026-02-17-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: green
+DTSTART;VALUE=DATE:20260219
+DTSTAMP:20260205T173119Z
+UID:2026-02-19-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/gold
+DTSTART;VALUE=DATE:20260223
+DTSTAMP:20260205T173119Z
+UID:2026-02-23-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/black/white
+DTSTART;VALUE=DATE:20260224
+DTSTAMP:20260205T173119Z
+UID:2026-02-24-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/black/green
+DTSTART;VALUE=DATE:20260225
+DTSTAMP:20260205T173119Z
+UID:2026-02-25-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue
+DTSTART;VALUE=DATE:20260226
+DTSTAMP:20260205T173119Z
+UID:2026-02-26-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: pink/green/blue/purple
+DTSTART;VALUE=DATE:20260228
+DTSTAMP:20260205T173119Z
+UID:2026-02-28-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
 END:VCALENDAR
