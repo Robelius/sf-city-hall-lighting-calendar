@@ -5,80 +5,100 @@ X-WR-CALDESC:San Francisco City Hall nightly lighting schedule
 X-WR-CALNAME:SF City Hall Lighting
 X-WR-TIMEZONE:America/Los_Angeles
 BEGIN:VEVENT
-SUMMARY:CHC: yellow
-DTSTART;VALUE=DATE:20260301
-DTSTAMP:20260302T204546Z
-UID:2026-03-01-cityhall@sf.gov
+SUMMARY:CHC: Blue/Green
+DTSTART;VALUE=DATE:20260410
+DTSTAMP:20260401T205503Z
+UID:2026-04-10-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: blue
-DTSTART;VALUE=DATE:20260305
-DTSTAMP:20260302T204546Z
-UID:2026-03-05-cityhall@sf.gov
+SUMMARY:CHC: Blue
+DTSTART;VALUE=DATE:20260411
+DTSTAMP:20260401T205503Z
+UID:2026-04-11-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: green/white/orange
-DTSTART;VALUE=DATE:20260306
-DTSTAMP:20260302T204546Z
-UID:2026-03-06-cityhall@sf.gov
+SUMMARY:CHC: Dark Blue
+DTSTART;VALUE=DATE:20260414
+DTSTAMP:20260401T205503Z
+UID:2026-04-14-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: orange
-DTSTART;VALUE=DATE:20260312
-DTSTAMP:20260302T204546Z
-UID:2026-03-12-cityhall@sf.gov
+SUMMARY:CHC: Periwinkle
+DTSTART;VALUE=DATE:20260416
+DTSTAMP:20260401T205503Z
+UID:2026-04-16-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: teal/grey
-DTSTART;VALUE=DATE:20260315
-DTSTAMP:20260302T204546Z
-UID:2026-03-15-cityhall@sf.gov
+SUMMARY:CHC: Red
+DTSTART;VALUE=DATE:20260417
+DTSTAMP:20260401T205503Z
+UID:2026-04-17-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: blue magenta/magenta/dark purple
-DTSTART;VALUE=DATE:20260323
-DTSTAMP:20260302T204546Z
-UID:2026-03-23-cityhall@sf.gov
+SUMMARY:CHC: Green
+DTSTART;VALUE=DATE:20260419
+DTSTAMP:20260401T205503Z
+UID:2026-04-19-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: blue magenta/magenta/dark purple
-DTSTART;VALUE=DATE:20260324
-DTSTAMP:20260302T204546Z
-UID:2026-03-24-cityhall@sf.gov
+SUMMARY:CHC: Blue/White/Blue
+DTSTART;VALUE=DATE:20260421
+DTSTAMP:20260401T205503Z
+UID:2026-04-21-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHC: cyan/white
-DTSTART;VALUE=DATE:20260325
-DTSTAMP:20260302T204546Z
-UID:2026-03-25-cityhall@sf.gov
+SUMMARY:CHC: Red/Blue/Orange
+DTSTART;VALUE=DATE:20260424
+DTSTAMP:20260401T205503Z
+UID:2026-04-24-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: Purple
+DTSTART;VALUE=DATE:20260426
+DTSTAMP:20260401T205503Z
+UID:2026-04-26-cityhall@sf.gov
+DESCRIPTION:No details provided
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: Red/White/Blue
+DTSTART;VALUE=DATE:20260430
+DTSTAMP:20260401T205503Z
+UID:2026-04-30-cityhall@sf.gov
 DESCRIPTION:No details provided
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
