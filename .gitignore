@@ -25,8 +25,12 @@ wheels/
 
 # Virtual environments
 venv/
+.venv/
 ENV/
 env/
+
+# Scraper debug output (uploaded as a CI artifact on failure)
+debug_page.html
 
 # IDE
 .vscode/

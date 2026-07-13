@@ -5,11 +5,101 @@ X-WR-CALDESC:San Francisco City Hall nightly lighting schedule
 X-WR-CALNAME:SF City Hall Lighting
 X-WR-TIMEZONE:America/Los_Angeles
 BEGIN:VEVENT
+SUMMARY:CHC: blue/red
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20260102T000000Z
+UID:2026-01-02-blue-red-cityhall@sf.gov
+DESCRIPTION:National Day of Haiti
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: 49ers red/gold
+DTSTART;VALUE=DATE:20260103
+DTEND;VALUE=DATE:20260104
+DTSTAMP:20260103T000000Z
+UID:2026-01-03-49ers-red-gold-cityhall@sf.gov
+DESCRIPTION:SF 49ers vs Seattle Seahawks for NFC’s No. 1 playoff seed
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: 49ers red/gold
+DTSTART;VALUE=DATE:20260110
+DTEND;VALUE=DATE:20260111
+DTSTAMP:20260110T000000Z
+UID:2026-01-10-49ers-red-gold-cityhall@sf.gov
+DESCRIPTION:SF 49ers vs Philadelphia Eagles for NFC’s Wild Card game
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: “tie-dye”
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+DTSTAMP:20260116T000000Z
+UID:2026-01-16-tie-dye-cityhall@sf.gov
+DESCRIPTION:Celebrating the cultural significance and enduring influence o
+ f the Grateful Dead on San Francisco’s identity
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: 49ers red/gold
+DTSTART;VALUE=DATE:20260117
+DTEND;VALUE=DATE:20260118
+DTSTAMP:20260117T000000Z
+UID:2026-01-17-49ers-red-gold-cityhall@sf.gov
+DESCRIPTION:SF 49ers vs Seattle Seahawks for NFC’s Divisional Round game
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/green/black
+DTSTART;VALUE=DATE:20260119
+DTEND;VALUE=DATE:20260120
+DTSTAMP:20260119T000000Z
+UID:2026-01-19-red-green-black-cityhall@sf.gov
+DESCRIPTION:MLK\, Jr Holiday
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/white/red
+DTSTART;VALUE=DATE:20260126
+DTEND;VALUE=DATE:20260127
+DTSTAMP:20260126T000000Z
+UID:2026-01-26-blue-white-red-cityhall@sf.gov
+DESCRIPTION:National Day of Australia
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: saffron/white/green
+DTSTART;VALUE=DATE:20260127
+DTEND;VALUE=DATE:20260128
+DTSTAMP:20260127T000000Z
+UID:2026-01-27-saffron-white-green-cityhall@sf.gov
+DESCRIPTION:National Day of India
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260201
-DTSTAMP:20260205T173119Z
-UID:2026-02-01-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260202
+DTSTAMP:20260201T000000Z
+UID:2026-02-01-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -17,9 +107,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260202
-DTSTAMP:20260205T173119Z
-UID:2026-02-02-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260203
+DTSTAMP:20260202T000000Z
+UID:2026-02-02-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -27,9 +118,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260203
-DTSTAMP:20260205T173119Z
-UID:2026-02-03-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260204
+DTSTAMP:20260203T000000Z
+UID:2026-02-03-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -37,9 +129,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260204
-DTSTAMP:20260205T173119Z
-UID:2026-02-04-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260205
+DTSTAMP:20260204T000000Z
+UID:2026-02-04-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -47,9 +140,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260205
-DTSTAMP:20260205T173119Z
-UID:2026-02-05-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260206
+DTSTAMP:20260205T000000Z
+UID:2026-02-05-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -57,9 +151,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260206
-DTSTAMP:20260205T173119Z
-UID:2026-02-06-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260207
+DTSTAMP:20260206T000000Z
+UID:2026-02-06-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -67,9 +162,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260207
-DTSTAMP:20260205T173119Z
-UID:2026-02-07-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260208
+DTSTAMP:20260207T000000Z
+UID:2026-02-07-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -77,9 +173,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/pink/yellow
 DTSTART;VALUE=DATE:20260208
-DTSTAMP:20260205T173119Z
-UID:2026-02-08-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260209
+DTSTAMP:20260208T000000Z
+UID:2026-02-08-blue-pink-yellow-cityhall@sf.gov
+DESCRIPTION:SF Bay Area hosting Super Bowl LX
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -87,9 +184,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: Red
 DTSTART;VALUE=DATE:20260210
-DTSTAMP:20260205T173119Z
-UID:2026-02-10-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260211
+DTSTAMP:20260210T000000Z
+UID:2026-02-10-red-cityhall@sf.gov
+DESCRIPTION:American Heart Month
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -97,9 +195,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: red/pink
 DTSTART;VALUE=DATE:20260214
-DTSTAMP:20260205T173119Z
-UID:2026-02-14-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20260214T000000Z
+UID:2026-02-14-red-pink-cityhall@sf.gov
+DESCRIPTION:Valentine’s Day
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -107,9 +206,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: red/white/blue
 DTSTART;VALUE=DATE:20260216
-DTSTAMP:20260205T173119Z
-UID:2026-02-16-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260217
+DTSTAMP:20260216T000000Z
+UID:2026-02-16-red-white-blue-cityhall@sf.gov
+DESCRIPTION:President’s Day Holiday
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -117,9 +217,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: yellow/green/red
 DTSTART;VALUE=DATE:20260217
-DTSTAMP:20260205T173119Z
-UID:2026-02-17-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20260217T000000Z
+UID:2026-02-17-yellow-green-red-cityhall@sf.gov
+DESCRIPTION:National Day of Lithuania
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -127,9 +228,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: green
 DTSTART;VALUE=DATE:20260219
-DTSTAMP:20260205T173119Z
-UID:2026-02-19-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260220
+DTSTAMP:20260219T000000Z
+UID:2026-02-19-green-cityhall@sf.gov
+DESCRIPTION:World Cholangiocarcinoma Day
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -137,9 +239,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: red/gold
 DTSTART;VALUE=DATE:20260223
-DTSTAMP:20260205T173119Z
-UID:2026-02-23-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260224
+DTSTAMP:20260223T000000Z
+UID:2026-02-23-red-gold-cityhall@sf.gov
+DESCRIPTION:Lunar New Year – Year of the Horse
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -147,9 +250,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/black/white
 DTSTART;VALUE=DATE:20260224
-DTSTAMP:20260205T173119Z
-UID:2026-02-24-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260225
+DTSTAMP:20260224T000000Z
+UID:2026-02-24-blue-black-white-cityhall@sf.gov
+DESCRIPTION:National Day of Estonia
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -157,9 +261,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: red/black/green
 DTSTART;VALUE=DATE:20260225
-DTSTAMP:20260205T173119Z
-UID:2026-02-25-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260226
+DTSTAMP:20260225T000000Z
+UID:2026-02-25-red-black-green-cityhall@sf.gov
+DESCRIPTION:Mayor’s Black History Month Closing Ceremony
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -167,9 +272,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue
 DTSTART;VALUE=DATE:20260226
-DTSTAMP:20260205T173119Z
-UID:2026-02-26-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260227
+DTSTAMP:20260226T000000Z
+UID:2026-02-26-blue-cityhall@sf.gov
+DESCRIPTION:Colorectal Cancer Awareness Month
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
@@ -177,9 +283,120 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: pink/green/blue/purple
 DTSTART;VALUE=DATE:20260228
-DTSTAMP:20260205T173119Z
-UID:2026-02-28-cityhall@sf.gov
-DESCRIPTION:No details provided
+DTEND;VALUE=DATE:20260301
+DTSTAMP:20260228T000000Z
+UID:2026-02-28-pink-green-blue-purple-cityhall@sf.gov
+DESCRIPTION:Rare Disease Day
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: teal/pink/purple/yellow/orange
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+DTSTAMP:20260701T000000Z
+UID:2026-07-01-teal-pink-purple-yellow-orange-cityhall@sf.gov
+DESCRIPTION:Cleft Awareness Month
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white/blue
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+DTSTAMP:20260704T000000Z
+UID:2026-07-04-red-white-blue-cityhall@sf.gov
+DESCRIPTION:America’s 250
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: green/white/red
+DTSTART;VALUE=DATE:20260706
+DTEND;VALUE=DATE:20260707
+DTSTAMP:20260706T000000Z
+UID:2026-07-06-green-white-red-cityhall@sf.gov
+DESCRIPTION:National Day of Algeria
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red
+DTSTART;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260709
+DTSTAMP:20260708T000000Z
+UID:2026-07-08-red-cityhall@sf.gov
+DESCRIPTION:the inaugural season for LOVB\, San Francisco
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/red/ yellow
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260711
+DTSTAMP:20260710T000000Z
+UID:2026-07-10-blue-red-yellow-cityhall@sf.gov
+DESCRIPTION:National Day of Mongolia
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/white/red
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+DTSTAMP:20260714T000000Z
+UID:2026-07-14-blue-white-red-cityhall@sf.gov
+DESCRIPTION:National Day of France
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: black/yellow/red
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260722
+DTSTAMP:20260721T000000Z
+UID:2026-07-21-black-yellow-red-cityhall@sf.gov
+DESCRIPTION:National Day of Belgium
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+DTSTAMP:20260727T000000Z
+UID:2026-07-27-red-white-cityhall@sf.gov
+DESCRIPTION:National Day of Peru
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/yellow/jade (dark green)
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+DTSTAMP:20260728T000000Z
+UID:2026-07-28-red-yellow-jade-dark-green-cityhall@sf.gov
+DESCRIPTION:World Hepatitis Day
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+DTSTAMP:20260729T000000Z
+UID:2026-07-29-red-white-cityhall@sf.gov
+DESCRIPTION:National Day of Switzerland
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
