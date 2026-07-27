@@ -865,6 +865,17 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:CHC: white/blue/red/ black
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+DTSTAMP:20260724T000000Z
+UID:2026-07-24-white-blue-red-black-cityhall@sf.gov
+DESCRIPTION:The Republic of Korea
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: red/white
 DTSTART;VALUE=DATE:20260727
 DTEND;VALUE=DATE:20260728
@@ -893,6 +904,17 @@ DTEND;VALUE=DATE:20260730
 DTSTAMP:20260729T000000Z
 UID:2026-07-29-red-white-cityhall@sf.gov
 DESCRIPTION:National Day of Switzerland
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white/blue
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+DTSTAMP:20260730T000000Z
+UID:2026-07-30-red-white-blue-cityhall@sf.gov
+DESCRIPTION:of the Mayor’s Samoan Heritage Celebration in City Hall
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
