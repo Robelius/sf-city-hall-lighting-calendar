@@ -919,4 +919,103 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: orange/white/green
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+DTSTAMP:20260806T000000Z
+UID:2026-08-06-orange-white-green-cityhall@sf.gov
+DESCRIPTION:National Day of Côte d'Ivoire (Ivory Coast)
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: light blue/pink/white
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+DTSTAMP:20260807T000000Z
+UID:2026-08-07-light-blue-pink-white-cityhall@sf.gov
+DESCRIPTION:Transgender History Month
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white
+DTSTART;VALUE=DATE:20260810
+DTEND;VALUE=DATE:20260811
+DTSTAMP:20260810T000000Z
+UID:2026-08-10-red-white-cityhall@sf.gov
+DESCRIPTION:National Day of Singapore
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: white/red/blue/black
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+DTSTAMP:20260814T000000Z
+UID:2026-08-14-white-red-blue-black-cityhall@sf.gov
+DESCRIPTION:National Day of Republic of Korea (South Korea)
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20260819
+DTSTAMP:20260818T000000Z
+UID:2026-08-18-red-white-cityhall@sf.gov
+DESCRIPTION:National Day of Indonesia
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/white/green
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+DTSTAMP:20260820T000000Z
+UID:2026-08-20-red-white-green-cityhall@sf.gov
+DESCRIPTION:National Day of Hungary
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/yellow
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+DTSTAMP:20260824T000000Z
+UID:2026-08-24-blue-yellow-cityhall@sf.gov
+DESCRIPTION:National Day of Ukraine
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: white/blue/gold
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+DTSTAMP:20260825T000000Z
+UID:2026-08-25-white-blue-gold-cityhall@sf.gov
+DESCRIPTION:National Day of Uruguay
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: purple
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+DTSTAMP:20260830T000000Z
+UID:2026-08-30-purple-cityhall@sf.gov
+DESCRIPTION:Overdose Awareness Day
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
 END:VCALENDAR
