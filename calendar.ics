@@ -987,6 +987,17 @@ URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CHC: blue/yellow
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260822
+DTSTAMP:20260821T000000Z
+UID:2026-08-21-blue-yellow-cityhall@sf.gov
+DESCRIPTION:National Day of Ukraine
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/yellow
 DTSTART;VALUE=DATE:20260824
 DTEND;VALUE=DATE:20260825
 DTSTAMP:20260824T000000Z
