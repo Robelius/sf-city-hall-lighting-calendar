@@ -964,6 +964,17 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:CHC: white/red/blue/black
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20260815T000000Z
+UID:2026-08-15-white-red-blue-black-cityhall@sf.gov
+DESCRIPTION:National Day of Republic of Korea (South Korea)
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: red/white
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20260819
