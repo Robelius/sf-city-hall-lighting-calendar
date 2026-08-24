@@ -975,6 +975,17 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:CHC: lavender
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+DTSTAMP:20260817T000000Z
+UID:2026-08-17-lavender-cityhall@sf.gov
+DESCRIPTION:the Valkyries’ pursuit of a playoff berth
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: red/white
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20260819
