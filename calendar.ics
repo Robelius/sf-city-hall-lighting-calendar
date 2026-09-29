@@ -1272,6 +1272,17 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:CHC: red/yellow
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+DTSTAMP:20260929T000000Z
+UID:2026-09-29-red-yellow-cityhall@sf.gov
+DESCRIPTION:National Day of China
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: orange
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -1279,6 +1290,161 @@ DTSTAMP:20260930T000000Z
 UID:2026-09-30-orange-cityhall@sf.gov
 DESCRIPTION:National Day of Remembrance for Indian Boarding School Survivo
  rs
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue/white
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+DTSTAMP:20261001T000000Z
+UID:2026-10-01-blue-white-cityhall@sf.gov
+DESCRIPTION:Mayor’s Latino Heritage Month Celebration in City Hall
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+DTSTAMP:20261002T000000Z
+UID:2026-10-02-blue-cityhall@sf.gov
+DESCRIPTION:SF Symphony Concert honoring Michael Tilson Thomas
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: black/red/gold
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+DTSTAMP:20261003T000000Z
+UID:2026-10-03-black-red-gold-cityhall@sf.gov
+DESCRIPTION:National Day of Germany
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: green
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+DTSTAMP:20261006T000000Z
+UID:2026-10-06-green-cityhall@sf.gov
+DESCRIPTION:Liver Disease & Liver Cancer Awareness Month
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red/yellow
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+DTSTAMP:20261009T000000Z
+UID:2026-10-09-red-yellow-cityhall@sf.gov
+DESCRIPTION:National Day of Spain
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: green/teal/pink
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+DTSTAMP:20261013T000000Z
+UID:2026-10-13-green-teal-pink-cityhall@sf.gov
+DESCRIPTION:Metastatic Breast Cancer Awareness Day
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: pink/blue
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+DTSTAMP:20261015T000000Z
+UID:2026-10-15-pink-blue-cityhall@sf.gov
+DESCRIPTION:National Pregnancy & Infant Loss Awareness Month
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: pink
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+DTSTAMP:20261017T000000Z
+UID:2026-10-17-pink-cityhall@sf.gov
+DESCRIPTION:the Inaugural San Francisco Market Street Arts & Theater Festi
+ val
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: blue
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+DTSTAMP:20261019T000000Z
+UID:2026-10-19-blue-cityhall@sf.gov
+DESCRIPTION:Men’s Breast Cancer Awareness Week
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: yellow/blue/red
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+DTSTAMP:20261021T000000Z
+UID:2026-10-21-yellow-blue-red-cityhall@sf.gov
+DESCRIPTION:Mayor’s Filipino Heritage Month Celebration in City Hall
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: sky blue/gold
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+DTSTAMP:20261022T000000Z
+UID:2026-10-22-sky-blue-gold-cityhall@sf.gov
+DESCRIPTION:National Day of Kazakhstan
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: red
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+DTSTAMP:20261023T000000Z
+UID:2026-10-23-red-cityhall@sf.gov
+DESCRIPTION:Red Ribbon Week
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: green/red/black/orange
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+DTSTAMP:20261024T000000Z
+UID:2026-10-24-green-red-black-orange-cityhall@sf.gov
+DESCRIPTION:National Day of Zambia
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHC: orange
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20261031T000000Z
+UID:2026-10-31-orange-cityhall@sf.gov
+DESCRIPTION:Halloween
 LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
  rancisco\, CA 94102
 URL:https://www.sf.gov/location--san-francisco-city-hall
