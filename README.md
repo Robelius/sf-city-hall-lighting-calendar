@@ -11,7 +11,7 @@ San Francisco City Hall is illuminated with different colored lights throughout 
 Add this calendar to your preferred calendar application:
 
 ```
-https://raw.githubusercontent.com/robelius/sf-city-hall-lighting-calendar/main/calendar.ics
+https://raw.githubusercontent.com/Robelius/sf-city-hall-lighting-calendar/main/calendar.ics
 ```
 
 ### How to Subscribe
@@ -42,7 +42,7 @@ Most calendar applications support iCalendar (.ics) subscriptions. Look for "Sub
 ## Event Format
 
 Each calendar event includes:
-- **Title**: `CHC: [Colors]` (e.g., "CHC: blue/red")
+- **Title**: `CHC: [Colors]` (e.g., "CHC: Blue/Red")
 - **Date**: All-day event on the lighting date
 - **Description**: Details about what the lighting honors
 - **Location**: San Francisco City Hall address
@@ -50,23 +50,23 @@ Each calendar event includes:
 ## Historical Data (CSV)
 
 All scraped events are also saved to [`lighting_schedule.csv`](lighting_schedule.csv) for historical reference. The CSV file contains:
-- **date**: ISO format date (YYYY-MM-DD)
-- **colors**: The lighting colors for that date
-- **details**: Description of what the lighting honors
+- **DATE**: ISO format date (YYYY-MM-DD)
+- **COLORS**: The lighting colors for that date, with each word capitalized (e.g. `Red/White/Blue`)
+- **DETAILS**: Description of what the lighting honors
 
-The CSV file accumulates all events over time without duplicates, providing a complete historical record of City Hall lighting schedules.
+The CSV file accumulates all events over time without duplicates, providing a complete historical record of City Hall lighting schedules. March–June 2026 was backfilled from Wayback Machine snapshots of the city's page.
 
 ## How It Works
 
 1. A GitHub Action runs on the 1st and 2nd of each month, plus weekly on Mondays, at 12pm PST
 2. The Python scraper fetches the SF City Hall website (with retries and WAF-challenge detection)
 3. It extracts the lighting schedule for the current month
-4. Merges new events into the CSV file (deduplicated; edited details update the existing row)
+4. Merges the scraped events into the CSV file. The city's page is the source of truth for the dates it lists: edited details and corrected colors replace the stored row, and an upcoming event that disappears from the current month's schedule is removed as cancelled. Past events stay as history.
 5. Regenerates the iCalendar (.ics) file from the full CSV history, so past events are preserved
 6. Commits the updated files to the repository
 7. Your subscribed calendar automatically syncs the changes
 
-If the scrape finds no events (site down, layout change, WAF block), the run fails loudly instead of committing an empty calendar, and the fetched HTML is uploaded as a workflow artifact for debugging.
+If the scrape finds no events (site down, layout change, WAF block), or if any line of the schedule cannot be parsed, the run fails loudly instead of committing an empty or partial calendar, and the fetched HTML is uploaded as a workflow artifact for debugging.
 
 ## Technical Details
 
@@ -74,7 +74,7 @@ If the scrape finds no events (site down, layout change, WAF block), the run fai
 - **Calendar Format**: iCalendar (.ics) standard, regenerated from the CSV history on every run
 - **Automation**: GitHub Actions (cron: 1st/2nd of the month + weekly on Mondays)
 - **Timezone**: America/Los_Angeles (Pacific Time)
-- **Tests**: `pip install -r requirements-dev.txt && pytest` — offline tests against a saved HTML fixture in `tests/fixtures/`, run in CI on every push
+- **Tests**: `pip install -r requirements-dev.txt && pytest` — offline tests against a saved copy of the schedule section in `tests/fixtures/`, run in CI on every push
 - **Note**: Uses Playwright because SF.gov requires JavaScript execution to bypass AWS WAF protection
 
 ## Data Source
