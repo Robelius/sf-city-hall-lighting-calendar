@@ -1681,6 +1681,17 @@ LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
 URL:https://www.sf.gov/location--san-francisco-city-hall
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:CHC: Yellow/White/Black/Red
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+DTSTAMP:20261117T000000Z
+UID:2026-11-17-yellow-white-black-red-cityhall@sf.gov
+DESCRIPTION:Mayor’s Native American Heritage Celebration in City Hall
+LOCATION:San Francisco City Hall\, 1 Dr. Carlton B. Goodlett Place\, San F
+ rancisco\, CA 94102
+URL:https://www.sf.gov/location--san-francisco-city-hall
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHC: Red/Blue
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
